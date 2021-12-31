@@ -1,19 +1,19 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
 
 const LoginPage = require('../pages/loginsleo.page');
-const SecurePage = require('../pages/secure.page');
+const HomePage = require('../pages/homesleo.page');
 
 
 Given(/^I am on the (\w+) page$/, () => {
- LoginPage.input(username)  
+ LoginPage.input(username, password)  
 });
 
 When(/^I login with (\w+) and (.+)$/, () => {
-   LoginPage.login(username, password)
+   LoginPage.click_btnSubmit()
 });
 
 Then(/^I should see home page(.*)$/, () => {
-    expect(SecurePage.flashAlert).toBeExisting();
-    expect(SecurePage.flashAlert).toHaveTextContaining(message);
+    expect(HomePage.flashAlert).toBeExisting();
+    
 });
 

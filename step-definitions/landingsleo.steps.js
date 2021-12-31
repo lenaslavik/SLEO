@@ -12,7 +12,7 @@ When(/^I login with (\w+) and (.+)$/,()  => {
 LoginPage.login(username, password)
 });
 
-Then(/^I should see a flash message saying (.*)$/, () => {
+Then(/^I should see log in page (.*)$/, () => {
     expect(LoginPage.flashAlert).toBeExisting();
     
 });
