@@ -15,4 +15,4 @@ class HomePage  {
 }
 
 
-module.exports = new LandingPage();
+module.exports = new HomePage();
